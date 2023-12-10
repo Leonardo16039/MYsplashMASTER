@@ -1,0 +1,12 @@
+{
+  "name": "victor/proyecto",
+  "autoload": {
+    "psr-4": {
+      "MVC\\": "./",
+      "Controllers\\": "./controllers",
+      "Models\\": "./models",
+      "Clases\\": "./clases"
+    }
+  },
+  "require": {}
+}

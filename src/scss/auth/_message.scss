@@ -1,0 +1,17 @@
+@use 'base/mixins' as m;
+.message{
+    margin-top: 10rem;
+}
+
+.confirm{
+    text-align: center;
+    @include m.grid(2,1rem);
+    .img-confirm{
+        height: 100vh;
+    }
+
+    .content-sm{
+        margin-top: 10rem;
+        
+    }
+}

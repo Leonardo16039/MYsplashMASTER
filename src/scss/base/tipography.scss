@@ -1,0 +1,30 @@
+@use 'variables' as v;
+
+h1, h2, h3 {
+    font-family: v.$fonts_headings;
+    margin: 0 0 calc(v.$gap / 2) 0 ;
+    font-weight: 900;
+}
+h1 {
+    font-size: 2.8rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.6rem;
+    color: v.$black;
+    line-height: 1.8;
+}
+a{
+    color: v.$gray;
+    text-decoration: underline;
+}
+.description{
+    text-align: center;
+    img{
+        height: 4.5rem;
+        margin-bottom: 2rem;
+    }
+}

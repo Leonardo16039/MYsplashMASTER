@@ -1,0 +1,119 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-home{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @include m.tablet{
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .header-home-input{
+            height: 5.5rem;
+            width: 23rem;
+            border: 1px solid #BDBDBD;
+            border-radius: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+
+            @include m.tablet{
+                width: 30rem;
+            }
+            &:hover{
+                box-shadow: 0 1px 6px 0 #20212447;
+                border-color: #dfe1e500;
+            }
+
+            .input-search{
+                width: 1.7rem;
+                height: 1.7rem;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            input{
+                border: none;
+                outline: none;
+                height: 4rem;
+                width: 18rem;
+                @include m.tablet{
+                    width: 25rem;
+
+                }
+            }
+        }
+    }
+
+    .header-action-user-desktop{
+        display: none;
+        @include m.desktop{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .btn{
+            @include m.botton(v.$green,v.$white,13.7rem);
+            border-radius: 1.2rem;
+            height: 5.5rem;
+            padding: 0;
+        }
+    }
+
+    .header-action-user{
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        #hamburger{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        @include m.desktop{
+            display: none;
+        }
+    }
+    
+}
+
+.action-user-contentList{
+    padding: 9rem 3rem;
+    background-color: v.$white;
+    position: absolute;
+    right: -1rem;
+    top: 6rem;
+    border-radius: 2rem;
+    border: 1px solid v.$gray;
+    z-index: 1;
+
+    .btn{
+        @include m.botton(v.$white, v.$black,80%);
+        position: absolute;
+        padding: 0.5rem;
+        bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border: 1px solid v.$gray;
+    }
+}
+
+
+.hide{
+    display: none;
+}

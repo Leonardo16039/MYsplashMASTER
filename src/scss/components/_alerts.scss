@@ -1,0 +1,17 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.alerts{
+    padding: 2rem 2rem .5rem;
+    margin-bottom: 2rem;
+    border-radius: .4rem;
+
+    &.error{
+        background-color: v.$pink;
+    }
+
+    &.success{
+        background-color: lighten(v.$green, 20%);
+
+    }
+}

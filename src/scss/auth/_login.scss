@@ -1,0 +1,63 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.login{
+    .alert.error{
+        background-color: v.$red;
+        padding: 2rem 0;
+        
+        ul{
+            display: inline;
+            text-align: center;
+            li{
+                list-style: none;
+                color: v.$white;
+    
+            }
+        }
+       
+    }
+    .content{
+        margin-top: 5rem;
+        position: relative;
+        min-height: 100vh;
+    }
+    
+
+    .actions{
+        width: 100%;
+
+        @include m.tablet{
+            width: 55rem;
+        }
+        position: absolute;
+        bottom: 0;
+        height: 11rem;
+        padding: 1rem;
+        border: 1px solid lighten(v.$gray, 30%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .login__alt-cta__img {
+            position: absolute;
+            pointer-events: none;
+            stroke: #d1d1d1;
+            fill: none;
+            opacity: 0.8;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+        }
+
+        .login__alt-cta__img01 {
+            left: 4%;
+            bottom: -10px;
+        }
+
+        .login__alt-cta__img02 {
+            right: 5%;
+            top: 0;
+        }
+    }
+
+}
